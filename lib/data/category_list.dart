@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/categories.dart';
 
-var categoriesList = {
+Map<Categories, GrocerryCategory> categoriesList = {
   Categories.vegetables: GrocerryCategory(
     'Vegetables',
     const Color.fromARGB(255, 0, 255, 128),

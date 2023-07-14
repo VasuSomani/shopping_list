@@ -17,7 +17,7 @@ class _NewItemState extends ConsumerState<NewItem> {
   TextEditingController quantityController = TextEditingController(text: "1");
 
   final formKey = GlobalKey<FormState>();
-
+  bool _isLoading = false;
   void _saveItem(BuildContext context) {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
@@ -65,9 +65,15 @@ class _NewItemState extends ConsumerState<NewItem> {
                 children: [
                   TextButton(
                       onPressed: () => Navigator.pop(context),
-                      child: Text("Cancel")),
+                      child: (_isLoading)
+                          ? (CircularProgressIndicator())
+                          : Text("Cancel")),
                   ElevatedButton(
-                    onPressed: () => _saveItem(context),
+                    onPressed: () {
+                      _isLoading = true;
+                      _saveItem(context);
+                      _isLoading = false;
+                    },
                     child: Text("Add"),
                   )
                 ],
