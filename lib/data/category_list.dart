@@ -1,45 +1,44 @@
 import 'package:flutter/material.dart';
+import 'models/categories.dart';
 
-import '../models/categories.dart';
-
-Map<Categories, GrocerryCategory> categoriesList = {
-  Categories.vegetables: GrocerryCategory(
+Map<Categories, GroceryCategory> categoriesList = {
+  Categories.vegetables: GroceryCategory(
     'Vegetables',
     const Color.fromARGB(255, 0, 255, 128),
   ),
-  Categories.fruit: GrocerryCategory(
+  Categories.fruit: GroceryCategory(
     'Fruit',
     const Color.fromARGB(255, 145, 255, 0),
   ),
-  Categories.meat: GrocerryCategory(
+  Categories.meat: GroceryCategory(
     'Meat',
     const Color.fromARGB(255, 255, 102, 0),
   ),
-  Categories.dairy: GrocerryCategory(
+  Categories.dairy: GroceryCategory(
     'Dairy',
     const Color.fromARGB(255, 0, 208, 255),
   ),
-  Categories.carbs: GrocerryCategory(
+  Categories.carbs: GroceryCategory(
     'Carbs',
     const Color.fromARGB(255, 0, 60, 255),
   ),
-  Categories.sweets: GrocerryCategory(
+  Categories.sweets: GroceryCategory(
     'Sweets',
     const Color.fromARGB(255, 255, 149, 0),
   ),
-  Categories.spices: GrocerryCategory(
+  Categories.spices: GroceryCategory(
     'Spices',
     const Color.fromARGB(255, 255, 187, 0),
   ),
-  Categories.convenience: GrocerryCategory(
+  Categories.convenience: GroceryCategory(
     'Convenience',
     const Color.fromARGB(255, 191, 0, 255),
   ),
-  Categories.hygiene: GrocerryCategory(
+  Categories.hygiene: GroceryCategory(
     'Hygiene',
     const Color.fromARGB(255, 149, 0, 255),
   ),
-  Categories.other: GrocerryCategory(
+  Categories.other: GroceryCategory(
     'Other',
     const Color.fromARGB(255, 0, 225, 255),
   ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/models/categories.dart';
+import '../../data/models/categories.dart';
 
 class ShoppingTile extends StatelessWidget {
   const ShoppingTile({
@@ -9,14 +9,14 @@ class ShoppingTile extends StatelessWidget {
     required this.quantity,
   }) : super(key: key);
 
-  final GrocerryCategory? category;
+  final GroceryCategory? category;
   final String title;
   final int quantity;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title, style: TextStyle(fontSize: 20)),
+      title: Text(title, style: const TextStyle(fontSize: 20)),
       leading: Container(
         color: category!.color,
         height: 25,
@@ -24,7 +24,7 @@ class ShoppingTile extends StatelessWidget {
       ),
       trailing: Text(
         quantity.toString(),
-        style: TextStyle(fontSize: 15),
+        style: const TextStyle(fontSize: 15),
       ),
     );
   }

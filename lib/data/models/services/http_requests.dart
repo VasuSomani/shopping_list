@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shopping_list/data/category_list.dart';
-import 'item.dart';
+import '../item.dart';
 
 Future<void> postData(Item myItem) async {
   const url =

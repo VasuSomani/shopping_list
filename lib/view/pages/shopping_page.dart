@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/models/http_requests.dart';
-import 'package:shopping_list/view/utils/new_item.dart';
-import 'package:shopping_list/view/utils/shoppping_tile.dart';
-import '../../models/item.dart';
+import '../../data/models/item.dart';
+import '../../data/models/services/http_requests.dart';
+import '../utils/new_item.dart';
+import '../utils/shoppping_tile.dart';
 
 class ShoppingPage extends StatefulWidget {
   const ShoppingPage({Key? key}) : super(key: key);

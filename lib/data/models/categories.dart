@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 enum Categories {
   vegetables,
@@ -13,8 +13,8 @@ enum Categories {
   other
 }
 
-class GrocerryCategory {
-  GrocerryCategory(this.title, this.color);
+class GroceryCategory {
+  GroceryCategory(this.title, this.color);
   final String title;
   final Color color;
 }

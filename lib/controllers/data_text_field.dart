@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shopping_list/data/category_list.dart';
-import 'package:shopping_list/models/categories.dart';
-
-import '../models/provider/state_notifier.dart';
+import '../data/category_list.dart';
+import '../data/models/categories.dart';
+import '../data/provider/state_notifier.dart';
 
 class NameField extends StatelessWidget {
   const NameField(this.controller, {Key? key}) : super(key: key);
@@ -65,9 +64,9 @@ class CategoryField extends ConsumerStatefulWidget {
 }
 
 class _CategoryFieldState extends ConsumerState<CategoryField> {
-  GrocerryCategory? _selectedCategory = categoriesList[0];
-  List<DropdownMenuItem<GrocerryCategory>> dropDownList = categoriesList.entries
-      .map((e) => DropdownMenuItem<GrocerryCategory>(
+  GroceryCategory? _selectedCategory = categoriesList[0];
+  List<DropdownMenuItem<GroceryCategory>> dropDownList = categoriesList.entries
+      .map((e) => DropdownMenuItem<GroceryCategory>(
           value: e.value,
           child: Row(
             children: [
@@ -85,9 +84,9 @@ class _CategoryFieldState extends ConsumerState<CategoryField> {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
-      hint: Text("Category"),
+      hint: const Text("Category"),
       value: _selectedCategory,
-      icon: Icon(Icons.arrow_drop_down),
+      icon: const Icon(Icons.arrow_drop_down),
       items: dropDownList,
       onChanged: (value) {
         setState(() {
@@ -95,7 +94,7 @@ class _CategoryFieldState extends ConsumerState<CategoryField> {
           ref.read(categoryProvider.notifier).changeCategory(value);
         });
       },
-      style: TextStyle(fontSize: 20),
+      style: const TextStyle(fontSize: 20),
     );
   }
 }

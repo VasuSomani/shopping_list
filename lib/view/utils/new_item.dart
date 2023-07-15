@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shopping_list/models/item.dart';
-import 'package:shopping_list/controllers/data_text_field.dart';
-
-import '../../models/provider/state_notifier.dart';
+import '../../controllers/data_text_field.dart';
+import '../../data/models/item.dart';
+import '../../data/provider/state_notifier.dart';
 
 class NewItem extends ConsumerStatefulWidget {
   NewItem({super.key});
@@ -52,29 +51,29 @@ class _NewItemState extends ConsumerState<NewItem> {
                     padding: const EdgeInsets.only(right: 20),
                     child: QuantityField(quantityController),
                   )),
-                  Expanded(
+                  const Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20),
                     child: CategoryField(),
                   ))
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
                       onPressed: () => Navigator.pop(context),
                       child: (_isLoading)
-                          ? (CircularProgressIndicator())
-                          : Text("Cancel")),
+                          ? (const CircularProgressIndicator())
+                          : const Text("Cancel")),
                   ElevatedButton(
                     onPressed: () {
                       _isLoading = true;
                       _saveItem(context);
                       _isLoading = false;
                     },
-                    child: Text("Add"),
+                    child: const Text("Add"),
                   )
                 ],
               )

@@ -1,12 +1,11 @@
 import 'dart:convert';
-
 import 'categories.dart';
 
 class Item {
   final String id;
   final String name;
   final int quantity;
-  final GrocerryCategory? category;
+  final GroceryCategory? category;
 
   Item({
     required this.id,
