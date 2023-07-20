@@ -1,16 +1,6 @@
 # shopping_list
 
 A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In this project I used Realtime Database offered by Firebase as backend server for application.
+Using this application we can easily create a shopping list from wide range of categories.
+Relatime adding and deleting product in shopping list.
